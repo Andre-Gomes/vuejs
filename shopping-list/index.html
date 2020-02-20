@@ -1,0 +1,26 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
+</script>
+<html>
+<div id="app" class="container">
+    <h2>{{ title }}</h2>
+    <ul>
+        <li v-for="item in items">{{ item }}</li>
+    </ul>
+    <div class="footer">
+        <hr />
+        <em>Change the title of your shopping list here</em>
+        <input v-model="title" />
+    </div>
+</div>
+<script>
+    var data = {
+        items: ['Bananas', 'Apples', "Milk", "Bread"],
+        title: 'My Shopping List'
+    };
+    new Vue({
+        el: '#app',
+        data: data
+    });
+</script>
+
+</html>
